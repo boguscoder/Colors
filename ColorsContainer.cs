@@ -26,10 +26,15 @@
 			}
 		}
 
-		public async Task LoadAsync(String url)
+		public async Task LoadAsync(String url, Action<String> progressReporter = null)
 		{
+			progressReporter?.Invoke("Initializing...");
 			var http = new HttpClient();
+
+			progressReporter?.Invoke("Downloading...");
 			var rawJson = await http.GetStringAsync(url).ConfigureAwait(false);
+
+			progressReporter?.Invoke("Unpacking...");
 			_colors = JsonConvert.DeserializeObject<List<Color>>(rawJson);
 		}
 	}

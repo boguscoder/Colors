@@ -90,6 +90,9 @@ namespace Colors
 			// aapt resource value: 0x7f050000
 			public const int item_touch_helper_previous_elevation = 2131034112;
 			
+			// aapt resource value: 0x7f050004
+			public const int progress = 2131034116;
+			
 			static Id()
 			{
 				global::Android.Runtime.ResourceIdManager.UpdateIdValues();
