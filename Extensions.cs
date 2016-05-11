@@ -1,5 +1,4 @@
-﻿using System;
-namespace Colors
+﻿namespace Colors
 {
 	public static class Extensions
 	{

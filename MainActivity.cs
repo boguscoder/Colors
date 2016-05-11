@@ -1,6 +1,7 @@
 ﻿namespace Colors
 {
 	using System.Threading.Tasks;
+
 	using Android.App;
 	using Android.OS;
 	using Android.Support.V7.Widget;
@@ -36,7 +37,7 @@
 
 			var colorList = FindViewById<RecyclerView>(Resource.Id.colorList);
 			colorList.SetAdapter(new ColorsAdapter(colors));
-			colorList.SetLayoutManager(new LinearLayoutManager(this));
+			colorList.SetLayoutManager(new GridLayoutManager(this, Resources.Configuration.Orientation == Android.Content.Res.Orientation.Portrait ? 2 : 4));
 		}
 	}
 }

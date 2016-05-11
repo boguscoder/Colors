@@ -1,6 +1,7 @@
 ﻿namespace Colors
 {
 	using System;
+
 	using Newtonsoft.Json;
 
 	public class Color
