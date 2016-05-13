@@ -12,13 +12,7 @@
 			_container = container;
 		}
 
-		public override int ItemCount
-		{
-			get
-			{
-				return _container.Size;
-			}
-		}
+		public override int ItemCount => _container.Size;
 
 		public override void OnBindViewHolder(RecyclerView.ViewHolder holder, int position)
 		{

@@ -12,13 +12,8 @@
 		[JsonProperty(PropertyName = "hex")]
 		public String HexString { get; set; }
 
-		public Android.Graphics.Color AndroidColor
-		{ 
-			get
-			{
-				return Android.Graphics.Color.ParseColor(HexString);
-			}
-		}
+		[JsonIgnore]
+		public Android.Graphics.Color AndroidColor => Android.Graphics.Color.ParseColor(HexString);
 	}
 }
 

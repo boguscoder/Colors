@@ -11,21 +11,9 @@
 	{
 		List<Color> _colors;
 
-		public int Size
-		{
-			get
-			{
-				return _colors?.Count ?? 0;
-			}
-		}
+		public int Size => _colors?.Count ?? 0;
 
-		public Color this[int idx]
-		{
-			get
-			{
-				return _colors?[idx] ?? null;
-			}
-		}
+		public Color this[int idx] => _colors?[idx] ?? null;
 
 		public async Task LoadAsync(String url, Action<String> progressReporter = null)
 		{
